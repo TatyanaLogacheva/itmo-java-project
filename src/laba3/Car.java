@@ -26,5 +26,4 @@ public class Car {
         return ("Цвет = " + colour + ", Название = " + name + ", Вес = " + weight);
     }
 
-
 }
