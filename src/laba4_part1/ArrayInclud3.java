@@ -1,4 +1,4 @@
-package laba4;
+package laba4_part1;
 
 import java.util.Arrays;
 

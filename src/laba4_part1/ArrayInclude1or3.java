@@ -1,4 +1,4 @@
-package laba4;
+package laba4_part1;
 
 public class ArrayInclude1or3 {
     public static void main(String[] args) {

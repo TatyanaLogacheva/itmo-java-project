@@ -1,4 +1,4 @@
-package laba4;
+package laba4_part1;
 
 public class div_3_and_5 {
     public static void search(int div) {
