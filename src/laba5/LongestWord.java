@@ -1,7 +1,7 @@
 package laba5;
 
 public class LongestWord {
-    public static String SearchWord(String text) {
+    public static String searchWord(String text) {
         String[] word = text.split(" ");
         int indexMax = 0;
         for (int i = 1; i < word.length; ++i) {
@@ -14,7 +14,7 @@ public class LongestWord {
 
     public static void main(String[] args) {
         String text = "Написать метод для поиска самого длинного слова в тексте";
-        System.out.println(SearchWord(text));
+        System.out.println(searchWord(text));
 
     }
 }

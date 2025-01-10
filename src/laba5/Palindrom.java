@@ -1,10 +1,13 @@
 package laba5;
 
 public class Palindrom {
-    public static boolean PalindromCheck(StringBuilder word) {
+    public static boolean palindromCheck(StringBuilder word) {
         String word2 = word.toString();
         word.reverse();
-        if (word2.equals(word.toString())) {
+        word2 = word2.toLowerCase();
+        String word1 = word.toString();
+        word1 = word1.toLowerCase();
+        if (word2.equals(word1.toLowerCase())) {
             return true;
         } else {
             return false;
@@ -12,7 +15,7 @@ public class Palindrom {
     }
 
     public static void main(String[] args) {
-        StringBuilder word = new StringBuilder("камаз");
-        System.out.println(PalindromCheck(word));
+        StringBuilder word = new StringBuilder("Топот");
+        System.out.println(palindromCheck(word));
     }
 }
