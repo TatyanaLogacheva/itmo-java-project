@@ -13,7 +13,7 @@ public class Palindrom {
     }
 
     public static void main(String[] args) {
-        StringBuilder word = new StringBuilder("Топот");
+        StringBuilder word = new StringBuilder("Топаз");
         System.out.println(palindromCheck(word));
     }
 }
