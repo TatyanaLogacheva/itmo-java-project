@@ -1,13 +1,13 @@
 package laba5;
 
 public class InvertWords {
-    public static String invert(String str) {
-        String newStr = new String();
+    public static StringBuilder invert(String str) {
+        StringBuilder newStr = new StringBuilder();
         String[] arrWords = str.split(" ");
         for (String word : arrWords) {
-            StringBuilder Word2 = new StringBuilder(word);
-            Word2.reverse();
-            newStr = newStr.concat(Word2.toString() + " ");
+            StringBuilder word2 = new StringBuilder(word);
+            word2.reverse();
+            newStr = newStr.append(word2 + " ");
         }
         return newStr;
     }
