@@ -8,11 +8,14 @@ public class Client extends Human {
         this.bankName = bankName;
     }
 
+    public String getBankName() {
+        return bankName;
+    }
+
     @Override
     public void displayInfo() {
-        System.out.println("Имя клиента: " + getName() + "\n" +
-                "Фамилия клиента: " + getSurname() + "\n" +
-                "Название банка: " + bankName + " \n");
-
+        System.out.println("Данные клиента:");
+        super.displayInfo();
+        System.out.println("Название банка: " + bankName + "\n");
     }
 }

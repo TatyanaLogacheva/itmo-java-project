@@ -1,6 +1,6 @@
 package laba6;
 
-public abstract class Human {
+public abstract class Human implements DisplayInfo {
     private String name;
     private String surname;
 
@@ -14,7 +14,10 @@ public abstract class Human {
     Human(String name, String surname){
         this.name=name;
         this.surname=surname;
-
     }
-    public abstract void displayInfo();
+
+    @Override
+    public void displayInfo() {
+        System.out.println("Имя: " + name + "\n" + "Фамилия: " + surname);
+    }
 }

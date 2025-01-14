@@ -8,11 +8,14 @@ public class BankEmployee extends Human {
         this.bankName = bankName;
     }
 
+    public String getBankName() {
+        return bankName;
+    }
+
     @Override
     public void displayInfo() {
-        System.out.println("Имя работника банка: " + getName() + "\n" +
-                "Фамилия работника банка: " + getSurname() + "\n" +
-                "Название банка: " + bankName + " \n");
-
+        System.out.println("Данные сотрудника:");
+        super.displayInfo();
+        System.out.println("Название банка: " + bankName + "\n");
     }
 }
