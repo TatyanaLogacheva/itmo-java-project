@@ -11,9 +11,10 @@ public abstract class Human implements DisplayInfo {
     public String getSurname() {
         return surname;
     }
-    Human(String name, String surname){
-        this.name=name;
-        this.surname=surname;
+
+    public Human(String name, String surname) {
+        this.name = name;
+        this.surname = surname;
     }
 
     @Override

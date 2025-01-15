@@ -3,7 +3,7 @@ package laba6;
 public class Client extends Human {
     private String bankName;
 
-    Client(String name, String surname, String bankName) {
+    public Client(String name, String surname, String bankName) {
         super(name, surname);
         this.bankName = bankName;
     }

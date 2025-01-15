@@ -3,7 +3,7 @@ package laba6;
 public class BankEmployee extends Human {
     private String bankName;
 
-    BankEmployee (String name, String surname, String bankName) {
+    public BankEmployee(String name, String surname, String bankName) {
         super(name, surname);
         this.bankName = bankName;
     }
