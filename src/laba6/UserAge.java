@@ -3,11 +3,13 @@ package laba6;
 import java.util.Scanner;
 
 public class UserAge {
+    int age;
     Scanner scanner = new Scanner(System.in);
-    String age = scanner.next();
 
-    public String getInfo() {
-        return age;
+    public void receiveInfo() {
+        int ag = scanner.nextInt();
+        age = ag;
     }
+
 
 }

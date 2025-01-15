@@ -1,11 +1,11 @@
 package laba6;
 
 public class UserName extends UserAge {
-    String name = scanner.next();
-
     @Override
-    public String getInfo() {
-        System.out.println(super.getInfo());
-        return name;
+    public void receiveInfo() {
+        super.receiveInfo();
+        String name = scanner.next();
+        System.out.println("Возраст " + age + "\n" + "Имя " + name);
     }
+
 }
