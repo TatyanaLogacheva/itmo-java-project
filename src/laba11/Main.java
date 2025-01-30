@@ -1,6 +1,8 @@
 package laba11;
 
 
+import java.util.concurrent.CountDownLatch;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -27,20 +29,19 @@ public class Main {
         System.out.println(runnable.getState());
 
         Counter counter = new Counter();
-        int count = 100;
         for (int i = 0; i < 100; i++) {
-            Thread countThread = new Thread(new CountThread(counter));
+            CountDownLatch latch = new CountDownLatch(1000);
+            Thread countThread = new Thread(new CountThread(counter, latch));
             countThread.start();
+            System.out.println(latch);
             try {
-                countThread.join();
+                latch.await();
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-            count--;
         }
-        if (count == 0) {
-            System.out.println(counter.getCount());
-        }
+
+        System.out.println(counter.getCount());
 
         ThreadName thread1 = new ThreadName("Thread 1");
         ThreadName thread2 = new ThreadName("Thread 2");
@@ -49,5 +50,6 @@ public class Main {
 
     }
 }
+
 
 
