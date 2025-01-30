@@ -33,7 +33,6 @@ public class Main {
             CountDownLatch latch = new CountDownLatch(1000);
             Thread countThread = new Thread(new CountThread(counter, latch));
             countThread.start();
-            System.out.println(latch);
             try {
                 latch.await();
             } catch (InterruptedException e) {
